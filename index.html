@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,54 +9,80 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <title>Document</title>
 </head>
+
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <header class="jumbotron jumbotron-fluid mb-5 mx-5">
         <div class="container-fluid">
-            <h1 class="display-4 text-center">New York Times Search</h1>
+            <h1 class="display-4 text-center font-weight-bold">New York Times Search</h1>
         </div>
     </header>
+
     <div class="card mx-5">
-        <div class="card-heading">
-            <p>Search Parameters</p>
+        <div class="card-heading bg-secondary">
+            <p class="font-weight-bold align-middle">Search Parameters</p>
         </div>
         <div class="card-body ">
+
             <label for="basic-url">Search Term:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                <input type="text" class="form-control" id="searchTerm" aria-describedby="basic-addon3">
             </div>
+
             <!-- <label for="basic-url">Number of Records to Retrieve:</label>
             <div class="dropdown mb-3">
                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
             </div> -->
+
             <label for="basic-url">Number of Records to Retrieve:</label>
             <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect04">
-                  <option selected>Choose...</option>
-                  <option value="5">5</option>
-                  <option value="10">10</option>
-                  <option value="15">15</option>
+                <select class="custom-select" id="numRecords">
+                    <option selected>Choose...</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
                 </select>
-              </div>
-              <label for="basic-url">Start Year (Optional):</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
             </div>
+
+            <label for="basic-url">Start Year (Optional):</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="startYear" aria-describedby="basic-addon3">
+            </div>
+
             <label for="basic-url">End Year (Optional):</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                <input type="text" class="form-control" id="endYear" aria-describedby="basic-addon3">
             </div>
-            <div class="form-control has-search>
-             <button type="button" class="btn btn-light fa fa-search">Search
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-             </button>
+
+            <div>
+                <button type="button" class="btn btn-secondary" aria-label="Left Align" id="search">
+                    <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                    Search
+                </button>
+
+                <button type="button" class="btn btn-secondary" aria-label="Left Align" id="clear">
+                    <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                    Clear Results
+                </button>
+
+
+                <!-- class="form-control has-search
+             fa fa-search -->
             </div>
         </div>
-    </div>    
-    <script src="script.js"></script>  
-</body>
-</html>
+    </div>
 
+    <div class="card mx-5 my-5">
+        <div class="card-heading bg-secondary" id="searchResults">
+            <p class="font-weight-bold align-middle">Top Article</p>
+        </div>
+        <div class="card-body " id="articles">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
 
 
 
